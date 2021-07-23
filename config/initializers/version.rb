@@ -1,7 +1,7 @@
 module TestGuru
-  MAJOR = 0
-  MINOR = 1
-  PATCH = 0
+  VERSION = '0.1.0'
 
-  VERSION = "#{MAJOR}.#{MINOR}.#{PATCH}"
+  def version
+    VERSION
+  end 
 end
