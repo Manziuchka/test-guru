@@ -3,14 +3,17 @@
 <table border="1">
   <tr>
     <th>Id</th>
-    <th>Body</th>
+    <th>Текст вопроса</th>
+    <th colspan=3>Действия</th>
   </tr>
 
   <% @questions.each do |question| %>
     <tr>
-      <td><%= question.id %></td>
-      <td><%= question.body %></td>
-      <td><%= link_to 'Удалить', question_path(question), 
+      <th><%= question.id %></th>
+      <th><%= question.body %></th>
+      <td><%= link_to "Просмотр", question_path(question) %></td>
+	    <td><%= link_to "Изменить", edit_question_path(question) %></td>
+        <td><%= link_to 'Удалить', question_path(question), 
               method: :delete,
               data: { confirm: 'Вы уверены?' } %></td>
     </tr>
