@@ -3,5 +3,5 @@ module TestGuru
 
   def version
     VERSION
-  end 
+  end
 end

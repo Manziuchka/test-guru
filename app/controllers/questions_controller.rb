@@ -12,9 +12,7 @@ class QuestionsController < ApplicationController
     @question
   end
 
-  def edit
-
-  end
+  def edit; end
 
   def new
     @question = @test.questions.new
@@ -39,8 +37,8 @@ class QuestionsController < ApplicationController
 
   def destroy
     @question.destroy
-    render plain: "Delete question"
-  end 
+    render plain: 'Delete question'
+  end
 
   private
 
@@ -57,6 +55,6 @@ class QuestionsController < ApplicationController
   end
 
   def rescue_with_question_not_found
-    render plain: "Question was not found"
+    render plain: 'Question was not found'
   end
 end
