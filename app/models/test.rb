@@ -1,6 +1,6 @@
 class Test < ApplicationRecord
   belongs_to :category
-  belongs_to :author, class_name: "User", foreign_key: "author_id"
+  belongs_to :author, class_name: 'User', foreign_key: 'author_id'
   has_many :questions
   has_many :tests_users
   has_many :users, through: :tests_users
@@ -13,7 +13,7 @@ class Test < ApplicationRecord
   scope :medium_tests, -> { where(level: 2..4) }
   scope :hard_tests, -> { where(level: 5..Float::INFINITY) }
 
-  scope :by_category, -> (category) { joins(:category).where(categories: {title: category}) }
+  scope :by_category, ->(category) { joins(:category).where(categories: { title: category }) }
 
   def self.tests_by_category(category)
     by_category(category).order(title: :desc).pluck(:title)
