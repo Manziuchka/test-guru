@@ -11,7 +11,7 @@ class AnswersController < ApplicationController
 
   def edit
   end
-
+  
   def create
     @answer = Answer.new(answer_params)
 

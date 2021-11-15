@@ -10,6 +10,10 @@ class TestsController < ApplicationController
 
   def edit; end
 
+  def new
+    @test = Test.new
+  end
+
   def update
     if @test.update(test_params)
       redirect_to @test

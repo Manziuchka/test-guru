@@ -9,6 +9,6 @@ class Answer < ApplicationRecord
   private
 
   def validate_numbers_of_answers
-    errors.add(:answer, 'too much') if question.answers.count >= 4
+    errors.add(:answers, 'too much') if question.answers.count >= 4
   end
 end
