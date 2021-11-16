@@ -1,1 +1,21 @@
 <h1>Тест <%= @test_passage.test.title %> завершен!</h1>
+
+<p>
+  <strong>Ваш результат:</strong> <%= @test_passage.correct_questions %> из <%= @test_passage.test.questions.count %>.
+</p>
+
+<% if @test_passage.is_passed?  %>
+  <p style="color:#00ff00" >
+    Тест пройден!
+  </p>
+<% else %>
+  <p style="color:#ff0000">
+    Тест не пройден!
+  </p>
+<% end %>
+
+<p>
+  <strong>Процент прохождения:</strong> <%= @test_passage.rate %>
+</p>
+
+<%= link_to 'Все тесты', tests_path %>
