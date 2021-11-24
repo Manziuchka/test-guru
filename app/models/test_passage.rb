@@ -29,7 +29,7 @@ class TestPassage < ApplicationRecord
     correct_questions / test.questions.count.to_f * 100
   end
 
-  def is_passed?
+  def passed?
     rate >= PASS_RATE
   end
    
