@@ -2,11 +2,13 @@ class ApplicationController < ActionController::Base
  
   helper_method :current_user, 
                 :logged_in?
+  before_action :authenticate_user!
   
   private
 
   def authenticate_user!
     unless current_user
+      cookies[:requested_path] = request&.path
       redirect_to login_path, alert: 'Если вы уже имеете учетную запись, введите ваш email и пароль'
     end
 
