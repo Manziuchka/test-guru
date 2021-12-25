@@ -11,8 +11,6 @@ class ApplicationController < ActionController::Base
       cookies[:requested_path] = request&.path
       redirect_to login_path, alert: 'Если вы уже имеете учетную запись, введите ваш email и пароль'
     end
-
-    cookies[:email] = current_user&.email
   end
 
   def current_user
