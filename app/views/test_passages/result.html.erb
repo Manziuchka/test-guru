@@ -4,7 +4,7 @@
   <strong>Ваш результат:</strong> <%= @test_passage.correct_questions %> из <%= @test_passage.test.questions.count %>.
 </p>
 
-<% if @test_passage.is_passed?  %>
+<% if @test_passage.passed?  %>
   <p style="color:#00ff00" >
     Тест пройден!
   </p>

@@ -1,0 +1,13 @@
+    <h1><%= link_to "TestGuru", root_path %></h1>
+    <% if logged_in? %>
+      <p class="nav user">Welcome, <b><%= current_user.email %></b> Guru | 
+        <%= link_to 'Logout', logout_path,
+                              data: { confirm: 'Вы уверены?' } %>
+      </p>
+
+    <% else %>
+      <p class="nav user">
+        <%= link_to 'Login', login_path %> | 
+        <%= link_to 'Signup', signup_path %>
+      </p>
+    <% end %>
