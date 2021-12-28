@@ -11,9 +11,9 @@
 </p>
 
 <p>
-	<%= link_to "Назад", tests_path(@test) %> |
-	<%= link_to "Изменить", edit_test_path(@test) %> |
-	<%= link_to "Удалить", test_path(@test),
+	<%= link_to "Назад", admin_tests_path(@test) %> |
+	<%= link_to "Изменить", edit_admin_test_path(@test) %> |
+	<%= link_to "Удалить", admin_test_path(@test),
                              method: :delete,
                              data:   { confirm: "Удалить тест?" } %>
 </p>
