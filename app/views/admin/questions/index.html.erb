@@ -11,9 +11,9 @@
     <tr>
       <th><%= question.id %></th>
       <th><%= question.body %></th>
-      <td><%= link_to "Просмотр", question_path(question) %></td>
-	    <td><%= link_to "Изменить", edit_question_path(question) %></td>
-        <td><%= link_to 'Удалить', question_path(question), 
+      <td><%= link_to "Просмотр", admin_question_path(question) %></td>
+	    <td><%= link_to "Изменить", edit_admin_question_path(question) %></td>
+        <td><%= link_to 'Удалить', admin_question_path(question), 
               method: :delete,
               data: { confirm: 'Вы уверены?' } %></td>
     </tr>
@@ -21,5 +21,5 @@
 </table>
 
 <p>
-   <%= link_to "Создать новый вопрос", new_test_question_path(@test) %>
+   <%= link_to "Создать новый вопрос", new_admin_test_question_path(@test) %>
 </p>

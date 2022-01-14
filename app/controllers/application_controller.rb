@@ -4,6 +4,16 @@ class ApplicationController < ActionController::Base
   
   protected
 
+  def after_sign_in_path_for(user)
+    if current_user.is_a?(Admin)
+      admin_tests_path
+    else
+      flash[:notice] = "Welcome #{current_user.name}"
+
+      tests_path
+    end
+  end
+
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
   end
