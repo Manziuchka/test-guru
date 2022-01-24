@@ -1,19 +1,19 @@
-<h1>Тест: <%= @test.title %></h1>
+<h1><%= t(".header")%> <%= @test.title %></h1>
 
-<h2>Вопросы к тесту:</h2>
+<h2><%= t(".questions")%></h2>
 
 <% @test.questions.each do |question| %>
    <li><%= question.body %><br>
 <% end %>
 
 <p>
-   <%= link_to "Создать новый вопрос", new_admin_test_question_path(@test) %>
+   <%= link_to t("links.new_test"), new_admin_test_question_path(@test) %>
 </p>
 
 <p>
-	<%= link_to "Назад", admin_tests_path(@test) %> |
-	<%= link_to "Изменить", edit_admin_test_path(@test) %> |
-	<%= link_to "Удалить", admin_test_path(@test),
+	<%= link_to t("links.back"), admin_tests_path(@test) %> |
+	<%= link_to t("links.update"), edit_admin_test_path(@test) %> |
+	<%= link_to t("links.delete"), admin_test_path(@test),
                              method: :delete,
-                             data:   { confirm: "Удалить тест?" } %>
+                             data:   { confirm: t("links.confirmation") } %>
 </p>

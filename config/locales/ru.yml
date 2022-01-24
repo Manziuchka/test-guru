@@ -1,5 +1,66 @@
 ru:
 #  hello: "Привет, мир!"
+  
+  helpers:
+    submit:
+      test:
+        create: "Создать тест"
+        update: "Обновить тест"
+    label:
+      test:
+        title: "Название"
+        level: "Уровень"
+        category_id: "Категория"
+
+  shared:
+    errors:
+      header:
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+        one: "Обнаружена %{count} ошибка"
+        other: "Обнаружено %{count} ошибки"
+  tests:
+    index:
+      header: "Доступные тесты"
+      title: "Название"
+      level: "Уровень"
+      questions: "Количество вопросов"
+      actions: "Действия"
+    test:
+      start: "Начать"
+  test_passages:
+    result:
+      header: "Тест %{title} успешно завершен!"
+  admin:
+    tests:
+      create:
+        success: "Тест успешно создан."
+      index:
+        header: "Доступные тесты"
+        title: "Название"
+        level: "Уровень"
+        questions: "Количество вопросов"
+        actions: "Действия"
+      edit:
+        header: "Редактировать тест"
+      show:
+        header: "Тест"
+        questions: "Вопросы к тесту:"
+      new:
+        header: "Новый тест"
+
+  links:
+    new_test: "Создать новый вопрос"
+    back: "Назад"
+    show: "Просмотр"
+    update: "Изменить"
+    delete: "Удалить"
+    confirmation: "Вы уверены?"
+
+  tests_mailer:
+    completed_test:
+      subject: "Вы успешно завершили тест на TestGuru!"
+
   activerecord:
     errors:
       messages:
@@ -176,13 +237,13 @@ ru:
         few: "%{model}: сохранение не удалось из-за %{count} ошибок"
         many: "%{model}: сохранение не удалось из-за %{count} ошибок"
         other: "%{model}: сохранение не удалось из-за %{count} ошибки"
-  helpers:
-    select:
-      prompt: 'Выберите: '
-    submit:
-      create: Создать %{model}
-      submit: Сохранить %{model}
-      update: Сохранить %{model}
+  # helpers:
+  #   select:
+  #     prompt: 'Выберите: '
+    # submit:
+    #   create: Создать %{model}
+    #   submit: Сохранить %{model}
+    #   update: Сохранить %{model}
   number:
     currency:
       format:
