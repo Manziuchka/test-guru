@@ -31,6 +31,65 @@
 
 en:
 #  hello: "Hello world"
+
+  helpers:
+    submit:
+      test:
+        create: "Create test"
+        update: "Update test"
+    label:
+      test:
+        title: "Title"
+        level: "Level"
+        category_id: "Category"
+
+  shared:
+    errors:
+      header:
+        one: "%{count} error detected"
+        other: "%{count} errors detected"
+  tests:
+    index:
+      header: "Tricky tests"
+      title: "Title"
+      level: "Level"
+      questions: "Number of questions"
+      actions: "Actions"
+    test:
+      start: "Start"
+  test_passages:
+    result:
+      header: "Test %{title} completed successfully!"
+  admin:
+    tests:
+      create:
+        success: "Test was successfully created."
+      index:
+        header: "Tricky tests"
+        title: "Title"
+        level: "Level"
+        questions: "Number of questions"
+        actions: "Actions"
+      edit:
+        header: "Edit test"
+      show:
+        header: "Test"
+        questions: "Questions:"
+      new:
+        header: "New test"
+
+  links:
+    new_test: "Create new test"
+    back: "Back"
+    show: "Show"
+    update: "Update"
+    delete: "Delete"
+    confirmation: "Are you sure?"
+
+  tests_mailer:
+    completed_test:
+      subject: "You just completed the TestGuru test!"
+      
   activerecord:
     errors:
       messages:
@@ -175,13 +234,13 @@ en:
       header:
         one: 1 error prohibited this %{model} from being saved
         other: "%{count} errors prohibited this %{model} from being saved"
-  helpers:
-    select:
-      prompt: Please select
-    submit:
-      create: Create %{model}
-      submit: Save %{model}
-      update: Update %{model}
+  # helpers:
+  #   select:
+  #     prompt: Please select
+  #   submit:
+  #     create: Create %{model}
+  #     submit: Save %{model}
+  #     update: Update %{model}
   number:
     currency:
       format:
