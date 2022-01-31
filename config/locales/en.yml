@@ -85,6 +85,7 @@ en:
     update: "Update"
     delete: "Delete"
     confirmation: "Are you sure?"
+    admin: "Admin panel"
 
   tests_mailer:
     completed_test:

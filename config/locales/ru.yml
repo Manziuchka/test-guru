@@ -56,6 +56,7 @@ ru:
     update: "Изменить"
     delete: "Удалить"
     confirmation: "Вы уверены?"
+    admin: "Панель администратора"
 
   tests_mailer:
     completed_test:
