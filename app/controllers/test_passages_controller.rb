@@ -1,7 +1,7 @@
 class TestPassagesController < ApplicationController
 
   before_action :authenticate_user!
-  before_action :set_test_passage, only: %i[show update result]
+  before_action :set_test_passage, only: %i[show update result gist]
 
   def show; end
 
@@ -17,6 +17,24 @@ class TestPassagesController < ApplicationController
       render :show
     end
   end
+
+  def gist
+    client = GistQuestionService.new(@test_passage.current_question)
+    gist = client.call
+
+    if client.success?
+
+      current_user.gists.create!(question_id: @test_passage.current_question.id, 
+        gist_url: gist.url)
+
+      redirect_to @test_passage, notice: "#{t(".success")} #{view_context.link_to('Gist', gist.url)}"
+      #"#{t(".success")} #{helpers.link_to "Gist", gist.url, target: "_blank"}"
+     # t(".success", gist_url: gist.url)
+    else
+      redirect_to @test_passage, alert: t(".failure")
+    end
+  end
+
 
   private
 

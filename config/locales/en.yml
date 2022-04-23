@@ -60,6 +60,9 @@ en:
   test_passages:
     result:
       header: "Test %{title} completed successfully!"
+    gist:
+      success: "Gist was successfully created!"
+      failure: "An error occurred while saving gist"
   admin:
     tests:
       create:
@@ -77,6 +80,9 @@ en:
         questions: "Questions:"
       new:
         header: "New test"
+
+  gist:
+    title: "A question from test: %{title}"
 
   links:
     new_test: "Create new test"

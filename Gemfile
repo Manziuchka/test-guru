@@ -33,6 +33,11 @@ gem 'devise', '~> 4.0'
 
 gem 'rails-i18n'
 
+# NETWORKING
+
+# gem 'faraday'
+gem "octokit", "~> 4.0"
+
 #UI
 
 gem 'bootstrap', '~> 5.0.0.beta2'
