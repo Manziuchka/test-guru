@@ -51,6 +51,12 @@ ru:
         questions: "Вопросы к тесту:"
       new:
         header: "Новый тест"
+    gists:
+      index:
+        header: "Доступные gists"
+        question: "Вопрос"
+        gist_url: "Url gist"
+        user: "Почта пользователя"
 
   gist:
     title: "Вопрос из теста: %{title}"
@@ -63,6 +69,8 @@ ru:
     delete: "Удалить"
     confirmation: "Вы уверены?"
     admin: "Панель администратора"
+    gists: "Gist панель"
+    tests: "Тесты"
 
   tests_mailer:
     completed_test:

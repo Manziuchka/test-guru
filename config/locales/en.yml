@@ -80,6 +80,12 @@ en:
         questions: "Questions:"
       new:
         header: "New test"
+    gists:
+      index:
+        header: "All gists"
+        question: "Question"
+        gist_url: "Url gist"
+        user: "User email"
 
   gist:
     title: "A question from test: %{title}"
@@ -92,6 +98,8 @@ en:
     delete: "Delete"
     confirmation: "Are you sure?"
     admin: "Admin panel"
+    gists: "Gist"
+    tests: "Tests"
 
   tests_mailer:
     completed_test:

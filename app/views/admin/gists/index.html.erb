@@ -1,0 +1,14 @@
+<h1><%= t('.header') %></h1>
+
+<table class="table table-striped table-hover table-bordered">
+  <thead class="table-light">
+    <th>Id</th>
+    <th><%= t(".question") %></th>
+    <th><%= t(".gist_url") %></th>
+    <th><%= t(".user") %></th>
+  </thead>
+  
+  <tbody>
+    <%= render @gists %>
+  </tbody>
+</table>

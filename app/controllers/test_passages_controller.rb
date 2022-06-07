@@ -28,8 +28,6 @@ class TestPassagesController < ApplicationController
         gist_url: gist.url)
 
       redirect_to @test_passage, notice: "#{t(".success")} #{view_context.link_to('Gist', gist.url)}"
-      #"#{t(".success")} #{helpers.link_to "Gist", gist.url, target: "_blank"}"
-     # t(".success", gist_url: gist.url)
     else
       redirect_to @test_passage, alert: t(".failure")
     end
